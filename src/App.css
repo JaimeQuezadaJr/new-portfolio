@@ -1,18 +1,61 @@
-.App {
-  text-align: center;
-}
-
-.title {
-    color: aqua;
-}
-
-.center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.bold {
-    font-weight: bold;
-    margin-bottom: 0;
-}
+.hide-bg{
+    mix-blend-mode: multiply;
+    filter: contrast(2);
+  }
+  .top-padding {
+    margin-top: 70px;
+  }
+  .info-top-padding {
+    margin-top: 40px;
+  }
+  
+  .carousel-item img {
+    height: 100%; /* Bootstrap handles width already */
+    object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+  }
+  
+  .carousel-inner {
+    height: 0;
+    padding-bottom: 45%; /* this sets carousel aspect ratio (4:1 here) */
+  }
+  
+  .carousel-item {
+    position: absolute !important; /* Bootstrap is insistent */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .home-p {
+    width: 75%;
+  }
+  .product-title {
+    font-size: 1000%;
+  }
+  
+  .info-p {
+    font-size: 1.3rem;
+  }
+  
+  .image-size {
+    width: 50%;
+  
+  }
+  
+  .center-element {
+    width:500px;
+    height:500px;
+    margin:0 auto;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-250px;
+    margin-top:-250px;
+  }
+  
+  .row-padding {
+    height: 230px;
+  }
+  .row-bottom-padding {
+    height: 300px;
+  }
