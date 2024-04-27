@@ -56,9 +56,9 @@ const NavBar = () => {
                     </Nav>
                     ):(
                     <Nav className=" justify-contend-end">
-                        <Nav.Link style={{fontSize:'medium'}} as={Link} to="/productinfo" className='d-flex align-items-center'>About</Nav.Link>
-                        <Nav.Link style={{fontSize:'medium'}}  as={Link} to="/login"className='d-flex align-items-center'>Projects</Nav.Link>
-                        <Nav.Link style={{fontSize:'medium'}} as={Link} to="/login" className='d-flex align-items-center'>Contact</Nav.Link>
+                        <Nav.Link style={{fontSize:'medium'}} as={Link} to="/about" className='d-flex align-items-center'>About</Nav.Link>
+                        <Nav.Link style={{fontSize:'medium'}}  as={Link} to="/projects"className='d-flex align-items-center'>Projects</Nav.Link>
+                        <Nav.Link style={{fontSize:'medium'}} as={Link} to="/contact" className='d-flex align-items-center'>Contact</Nav.Link>
                     </Nav>
                     )}
                     
