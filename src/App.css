@@ -49,6 +49,10 @@
     display: block;
     margin: auto;
   }
+
+  .video-corners {
+    border-radius: 20px;
+  }
   
   .center-element {
     width:500px;
