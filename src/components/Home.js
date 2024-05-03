@@ -53,6 +53,7 @@ const Home = (props) => {
 
         <hr></hr>
 
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once:false }} transition={{duration:3}}>
             <Row className='info-top-padding text-center pt-5 pb-5 mt-5 mb-5'>
                 <Col>
                 <h1 className='display-5 roboto-thin'>Developer</h1>
@@ -105,8 +106,10 @@ const Home = (props) => {
                     </motion.div>
                 </Col>
             </Row>
+            </motion.div>
 
             <hr></hr>
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once:false }} transition={{duration:3}}>
             <Row className='mb-5 pb-5 mt-5 pt-5'>
                 <Col lg={8}>
                     <video className='img-fluid video-corners' autoPlay muted loop>
@@ -116,17 +119,19 @@ const Home = (props) => {
                 <Col lg={4}>
                     <h1 className='roboto-regular mb-5'>nutrilog</h1>
                     <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-regular'>&#60; MongoDB / Express.js / Node.js / React.js /&#62;</p></motion.div>
-                    <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-regular'>&#60; Created RESTful API in order to allow user CRUD operations /&#62;</p></motion.div>
-                    <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-regular'>&#60; Integrated the USDA FoodData Central API to incorporate nutrition data /&#62;</p></motion.div>
+                    <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-light'>&#60; Created RESTful API in order to allow user CRUD operations /&#62;</p></motion.div>
+                    <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-light'>&#60; Integrated the USDA FoodData Central API to incorporate nutrition data /&#62;</p></motion.div>
                     <motion.button whileHover={{scale: 1.1}} whileTap={{ scale: 0.9 }} type="button" className="btn btn-light roboto-light shadow mb-5">Learn More</motion.button>
                 </Col>
             </Row>
+            </motion.div>
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once:false }} transition={{duration:3}}>
             <Row className='pt-5 mt-5 pb-5 mb-5'>
                 <Col lg={4}>
                     <h1 className='roboto-regular mb-5'>TravelMem</h1>
                     <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-regular'>&#60; Python / Flask / MySQL /&#62;</p></motion.div>
-                    <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-regular'>&#60; Used back end validation to verify user input and keep data consistent for user CRUD operations /&#62;</p></motion.div>
-                    <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-regular'>&#60; Utilized one-to-many and many-to-many relationships within MySQL to connect all registered users, allowing for liking posts and adding comments /&#62;</p></motion.div>
+                    <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-light'>&#60; Used back end validation to verify user input and keep data consistent for user CRUD operations /&#62;</p></motion.div>
+                    <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-light'>&#60; Utilized one-to-many and many-to-many relationships within MySQL to connect all registered users, allowing for liking posts and adding comments /&#62;</p></motion.div>
                     <motion.button whileHover={{scale: 1.1}} whileTap={{ scale: 0.9 }} type="button" className="btn btn-light roboto-light shadow mb-5">Learn More</motion.button>
                 </Col>
                 <Col lg={8}>
@@ -135,7 +140,10 @@ const Home = (props) => {
                     </video>
                 </Col>
             </Row>
+            </motion.div>
+
             <hr></hr>
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once:false }} transition={{duration:3}}>
                 <Row className='mb-5 mt-5 pt-5'>
                     <Col>
                         <h1 className='text-center roboto-light'>Design</h1>
@@ -155,6 +163,7 @@ const Home = (props) => {
                         <p className='info-top-padding roboto-thin pt-2 text-center'>&#60; Focus on clean code and learning the newest technologies /&#62;</p>
                     </Col>
                 </Row>
+            </motion.div>   
             <hr></hr>
 
             <Row className='d-flex justify-content-center mb-5 mt-5 pt-5'>
