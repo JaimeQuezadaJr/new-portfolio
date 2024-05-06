@@ -54,7 +54,6 @@ const Home = (props) => {
             
 
             <hr></hr>
-
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once:false }} transition={{duration:3}}>
                 <Row className='info-top-padding text-center pt-5 pb-5 mt-5 mb-5'>
                     <Col>
@@ -230,10 +229,13 @@ const Home = (props) => {
                     </Col>
                     </Row>
                 </motion.div>
-
-                
             </Container>
-
+            <footer className='bg-light p-2'>
+                <div className='d-flex justify-content-around'>
+                {/* <p className='m-0 roboto-light'>Designed & Developed by Jaime Quezada Jr</p> */}
+                    <p className='m-0 roboto-light' style={{fontSize:'0.8rem'}}>Copyright &#169; Jaime Quezada Jr 2024</p>
+                </div>
+            </footer>
         </div>
     )
 }

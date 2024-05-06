@@ -56,6 +56,12 @@ const About = () => {
                     </Row>
                 </motion.div>
             </Container>
+            <footer className='bg-light p-2'>
+                <div className='d-flex justify-content-around'>
+                {/* <p className='m-0 roboto-light'>Designed & Developed by Jaime Quezada Jr</p> */}
+                    <p className='m-0 roboto-light' style={{fontSize:'0.8rem'}}>Copyright &#169; Jaime Quezada Jr 2024</p>
+                </div>
+            </footer>
         </div>
   )
 }
