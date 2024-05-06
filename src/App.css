@@ -39,7 +39,9 @@
   
   .image-size {
     width: 50%;
-  
+  }
+  .project-info {
+    font-size: 0.8rem;
   }
 
   .responsive {
