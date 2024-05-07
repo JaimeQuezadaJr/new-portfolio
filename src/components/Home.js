@@ -23,6 +23,9 @@ const Home = (props) => {
         window.removeEventListener('resize', setWindowDimensions)
       }
     }, [])
+    useEffect(() => {
+        window.scrollTo({top:0, left:0, behavior:'instant'})
+      },[])
 
     return (
         <div className= {windowWidth < 640? ('mobile-top-padding'):'top-padding'}>
@@ -48,11 +51,11 @@ const Home = (props) => {
                         repeat={Infinity}
                         style={{ display: 'inline-block' }}
                 />
-                        <p className='info-top-padding roboto-medium'>Team oriented Full Stack Software Developer with hands-on experience in multiple stacks including Python and MERN. </p>
+                        <p className='info-top-padding roboto-medium'>Team oriented Fullstack Software Developer with hands-on experience in multiple stacks including Python and MERN. </p>
                         {windowWidth < 640 ? (
                         <div className='d-flex'>
-                            <p className='roboto-thin pt-2 mobile-font text-center'>&#60; Focus on clean code and learning the newest technologies /&#62;</p>
-                            <p className='roboto-thin p-4 pt-2 mobile-font text-center'>&#60; Bringing creative approaches to research, analysis, and decision making /&#62; </p>
+                            <p className='roboto-thin pt-2 mobile-font text-start'>&#60; Focus on creating clean code and continuing to learn the newest technologies /&#62;</p>
+                            <p className='roboto-thin p-4 pt-2 mobile-font text-end'>&#60; Bringing creative approaches to research, analysis, and decision making /&#62; </p>
                             </div>
                         ):(
                         <div className='d-flex'>
@@ -97,7 +100,7 @@ const Home = (props) => {
                 />
                     
                     <p className='info-top-padding roboto-thin pt-2'>&#60; Proven experience using web fundamentals as well as full stack python and MERN development. /&#62;</p>
-                    <motion.button whileHover={{scale:1.6}} whileTap={{ scale: 0.9 }} type="button" className="btn btn-light roboto-light shadow m-3">My Resume</motion.button>
+                    <motion.button whileHover={{scale:1.6}} whileTap={{ scale: 0.9 }} type="button" className= {windowWidth < 640 ? ("btn btn-light roboto-light shadow m-3 mb-5"):("btn btn-light roboto-light shadow m-3")}>My Resume</motion.button>
                     </Col>
                     <Col md className='d-flex align-items-center'>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}>
@@ -133,12 +136,12 @@ const Home = (props) => {
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once:false }} transition={{duration:3}}>
                 <Row className='mb-5 pb-5 mt-5 pt-5'>
                     <Col lg={8}>
-                        <video className='img-fluid video-corners' autoPlay muted loop>
+                        <video className= {windowWidth < 940 ? ('img-fluid video-corners'):('img-fluid video-corners')} autoPlay muted loop>
                             <source src="nutrilogvideo720.mp4" type="video/mp4"/>
                         </video>
                     </Col>
                     <Col lg={4}>
-                        <h1 className='roboto-regular mb-2'>nutrilog</h1>
+                        <h1 className= {windowWidth < 940 ? ('roboto-regular mb-2 mt-4'):('roboto-regular mb-2')}>nutrilog</h1>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-regular'>&#60; MongoDB / Express.js / Node.js / React.js /&#62;</p></motion.div>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-light project-info'>&#60; Architected an intuitive single page app with React and implemented responsive design with React-Bootstrap for a consistent user experience across screen sizes /&#62;</p></motion.div>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-light project-info'>&#60; Developed back-end with Express and MongoDB for their flexible structure and ease of data access /&#62;</p></motion.div>
@@ -155,7 +158,7 @@ const Home = (props) => {
                 </Row>
                 </motion.div>
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once:false }} transition={{duration:3}}>
-                <Row className='pt-5 mt-5 pb-5 mb-5'>
+                <Row className={windowWidth < 940 ? ('pb-5 mb-5'):('pt-5 mt-5 pb-5 mb-5')}>
                     <Col lg={4}>
                         <h1 className='roboto-regular mb-2'>TravelMem</h1>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-regular'>&#60; Python / Flask / MySQL /&#62;</p></motion.div>
@@ -173,7 +176,7 @@ const Home = (props) => {
                         
                         {/* <motion.button whileHover={{scale: 1.1}} whileTap={{ scale: 0.9 }} type="button" className="btn btn-light roboto-light shadow mb-5 mt-5">Learn More</motion.button> */}
                     </Col>
-                    <Col lg={8}>
+                    <Col className={windowWidth < 940 ? ('mt-5'):(null)} lg={8}>
                         <video className='img-fluid video-corners' autoPlay muted loop>
                             <source src="TravelMem New Copy.mp4" type="video/mp4"/>
                         </video>
@@ -204,12 +207,17 @@ const Home = (props) => {
 
                 <hr></hr>
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once:false }} transition={{duration:3}}>
-                    <Row className='mb-5 mt-5 pt-5'>
+                    {/* <Row className='mb-5 mt-5 pt-5'> 
                         <Col>
-                            <h1 className='text-center roboto-light'>Communication</h1>
-                            <p className='info-top-padding roboto-thin pt-2 text-center'>&#60; By delivering messages clearly, there is no room for misunderstanding or alteration of messages, which decreases the potential for conflict. In situations where conflict does arise, effective communication is a key factor to ensure that the situation is resolved in a respectful manner. /&#62;</p>
+                            <h3 className='text-start roboto-medium'>Core Qualities</h3>
                         </Col>
-                        <Col md className='d-flex align-items-center'>
+                    </Row> */}
+                    <Row className='mb-5 mt-5 pt-5'>
+                        <Col lg>
+                            <h1 className='text-center roboto-light'>Communication</h1>
+                            <p className={windowWidth < 640 ? ('info-top-padding roboto-thin pt-2 text-center mobile-font'):('info-top-padding roboto-thin pt-2 text-center')}>&#60; Communication is essential in software development to ensure alignment among team members, foster collaboration, and effectively address project requirements and challenges /&#62;</p>
+                        </Col>
+                        <Col lg className='d-flex align-items-center'>
                             <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}>
                                 <Image fluid
                                     className="p-5"
@@ -218,9 +226,9 @@ const Home = (props) => {
                                     />
                             </motion.div>
                         </Col>
-                        <Col>
+                        <Col lg>
                             <h1 className='text-center roboto-light'>Problem Solving</h1>
-                            <p className='info-top-padding roboto-thin pt-2 text-center'>&#60; Problem-solving enables us to identify and exploit opportunities in the environment and exert (some level of) control over the future. Problem solving skills and the problem-solving process are a critical part of daily life both as individuals and organizations. /&#62;</p>
+                            <p className={windowWidth < 640 ? ('info-top-padding roboto-thin pt-2 text-center mobile-font'):('info-top-padding roboto-thin pt-2 text-center')}>&#60; Problem-solving is crucial in software development as it enables developers to overcome challenges, innovate solutions, and create robust and efficient software products that meet user needs effectively. /&#62;</p>
                         </Col>
                     </Row>
                 </motion.div>   

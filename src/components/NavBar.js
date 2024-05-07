@@ -31,7 +31,7 @@ const NavBar = () => {
             {windowWidth < 640 ? (
                 <Navbar className='fixed-top bg-light' style={{height:'100px'}}>
                     <Container className='p-5'>
-                        <Navbar.Brand as={Link} to="/" className='roboto-black'>Jaime Quezada Jr</Navbar.Brand>
+                        <Navbar.Brand as={Link} to="/" className='roboto-medium'>Jaime Quezada</Navbar.Brand>
                             <Nav className=" justify-contend-end">
                                 <Nav.Link as={Link}><h1><i className="bi bi-list" onClick={handleShow2}></i></h1></Nav.Link>
                                 <Offcanvas placement='end' show={show2} onHide={handleClose2}>
@@ -54,7 +54,7 @@ const NavBar = () => {
             ):(
             <Navbar className='fixed-top bg-light' style={{height:'160px'}}>
                 <Container className='p-5'>
-                    <Navbar.Brand as={Link} to="/" style={{fontSize:'x-large'}} className='roboto-black'>Jaime Quezada Jr</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/" style={{fontSize:'x-large'}} className='roboto-medium'>Jaime Quezada Jr</Navbar.Brand>
                         <Nav className=" justify-contend-end">
                             <Nav.Link as={Link}><h1><i className="bi bi-list" onClick={handleShow2}></i></h1></Nav.Link>
                             <Offcanvas placement='end' show={show2} onHide={handleClose2}>
