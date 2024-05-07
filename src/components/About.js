@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Container from 'react-bootstrap/Container';
@@ -9,6 +10,9 @@ import { TypeAnimation } from 'react-type-animation';
 
 const About = () => {
     const navigate = useNavigate();
+    useEffect(() => {
+        window.scrollTo({top:0, left:0, behavior:'instant'})
+      },[])
     return (
         <div className='top-padding'>
             <Container className='p-5'>

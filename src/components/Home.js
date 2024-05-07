@@ -1,4 +1,4 @@
-import React from 'react';
+import { React } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Container from 'react-bootstrap/Container';
@@ -6,12 +6,26 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import { TypeAnimation } from 'react-type-animation';
+import { useState, useEffect } from 'react';
 
 
 const Home = (props) => {
     const navigate = useNavigate();
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+    const [windowHeight, setWindowHeight] = useState(window.innerHeight)
+    const setWindowDimensions = () => {
+      setWindowWidth(window.innerWidth)
+      setWindowHeight(window.innerHeight)
+    }
+    useEffect(() => {
+      window.addEventListener('resize', setWindowDimensions);
+      return () => {
+        window.removeEventListener('resize', setWindowDimensions)
+      }
+    }, [])
+
     return (
-        <div className='top-padding'>
+        <div className= {windowWidth < 640? ('mobile-top-padding'):'top-padding'}>
             <Container className='p-5'>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} exit={{ opacity: 0}} transition={{duration:3}}>
                 <Row className='pb-5 mb-5'>
@@ -35,16 +49,22 @@ const Home = (props) => {
                         style={{ display: 'inline-block' }}
                 />
                         <p className='info-top-padding roboto-medium'>Team oriented Full Stack Software Developer with hands-on experience in multiple stacks including Python and MERN. </p>
+                        {windowWidth < 640 ? (
+                        <div className='d-flex'>
+                            <p className='roboto-thin pt-2 mobile-font text-center'>&#60; Focus on clean code and learning the newest technologies /&#62;</p>
+                            <p className='roboto-thin p-4 pt-2 mobile-font text-center'>&#60; Bringing creative approaches to research, analysis, and decision making /&#62; </p>
+                            </div>
+                        ):(
                         <div className='d-flex'>
                             <p className='info-top-padding roboto-thin pt-2'>&#60; Focus on clean code and learning the newest technologies /&#62;</p>
                             <p className='info-top-padding roboto-thin p-4 pt-2'>&#60; Bringing creative approaches to research, analysis, and decision making /&#62; </p>
-                        </div>
+                        </div>)}
                         <motion.button whileHover={{scale: 1.6}} whileTap={{ scale: 0.9 }} type="button" className="btn btn-light roboto-light shadow mb-5" onClick={() => navigate('/about')}>About Me</motion.button>
                     </Col>
                     <Col md>
                         <i class="bi bi-code-slash"></i>
                         <Image fluid roundedCircle
-                            className="responsive rounded shadow-lg p-1 mb-1 bg-white"
+                            className= {windowWidth < 640 ? ("mobile-responsive rounded shadow-lg p-1 mb-1 bg-white") :"responsive rounded shadow-lg p-1 mb-1 bg-white"}
                             src="portoflio photo.jpeg"
                             alt="web developer"
                             />
