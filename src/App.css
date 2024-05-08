@@ -64,9 +64,7 @@
   }
   
   .footer{
-    position: absolute;;
-    width: 100%;
-    bottom: 0;
+    height: 40px;
   }
   .responsive {
     width: 100%;
@@ -74,6 +72,11 @@
     height: auto;
     display: block;
     margin: auto;
+  }
+  .responsive-about {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
   }
 
   .video-corners {
@@ -168,4 +171,14 @@
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     font-style: italic;
+  }
+
+  .progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background:black;
+    transform-origin: 0%;
   }

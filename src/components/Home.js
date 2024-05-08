@@ -1,15 +1,20 @@
-import { React } from 'react';
+import { React, useState, useEffect  } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import { TypeAnimation } from 'react-type-animation';
-import { useState, useEffect } from 'react';
 
 
 const Home = (props) => {
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+      });
     const navigate = useNavigate();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
     const [windowHeight, setWindowHeight] = useState(window.innerHeight)
@@ -30,6 +35,7 @@ const Home = (props) => {
     return (
         <div className= {windowWidth < 640? ('mobile-top-padding'):'top-padding'}>
             <Container className='p-5'>
+            <motion.div className="progress-bar" style={{ scaleX }} />
             <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} exit={{ opacity: 0}} transition={{duration:3}}>
                 <Row className='pb-5 mb-5'>
                     <Col md>
@@ -51,7 +57,7 @@ const Home = (props) => {
                         repeat={Infinity}
                         style={{ display: 'inline-block' }}
                 />
-                        <p className='info-top-padding roboto-medium'>Team oriented Fullstack Software Developer with hands-on experience in multiple stacks including Python and MERN. </p>
+                        <p className='info-top-padding roboto-medium'>As an eager full-stack developer, I'm ready to dive into exciting projects, contribute my skills, and collaborate with passionate teams to create impactful and innovative solutions. </p>
                         {windowWidth < 640 ? (
                         <div className='d-flex'>
                             <p className='roboto-thin pt-2 mobile-font text-start'>&#60; Focus on creating clean code and continuing to learn the newest technologies /&#62;</p>
@@ -258,7 +264,7 @@ const Home = (props) => {
                     </Row>
                 </motion.div>
             </Container>
-            <footer className='bg-light p-2'>
+            <footer className='bg-light p-2 footer'>
                 <div className='d-flex justify-content-around'>
                 {/* <p className='m-0 roboto-light'>Designed & Developed by Jaime Quezada Jr</p> */}
                     <p className='m-0 roboto-light' style={{fontSize:'0.8rem'}}>Copyright &#169; Jaime Quezada Jr 2024</p>
