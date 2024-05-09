@@ -6,9 +6,21 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import { TypeAnimation } from 'react-type-animation';
-
+import resume from './Resume/Jaime Quezada.pdf'
 
 const Home = (props) => {
+    const {currentLightMode, setCurrentLightMode} = props
+    const {currentDarkMode, setCurrentDarkMode} = props
+    const [dark, setDark] = useState(false)
+    const [light, setLight] = useState(true)
+    const handleDark = ()=> {
+            setCurrentDarkMode(true);
+            setCurrentLightMode(false)
+}
+    const handleLight = ()=> {
+        setCurrentLightMode(true);
+        setCurrentDarkMode(false)
+}
     const { scrollYProgress } = useScroll();
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
@@ -33,12 +45,19 @@ const Home = (props) => {
       },[])
 
     return (
-        <div className= {windowWidth < 640? ('mobile-top-padding'):'top-padding'}>
+        <div className={windowWidth < 640? ('mobile-top-padding'):'top-padding'} style={currentDarkMode? {backgroundColor:'black', color:'white'}:null}>
             <Container className='p-5'>
-            <motion.div className="progress-bar" style={{ scaleX }} />
+            <motion.div className="progress-bar" style={currentDarkMode? {backgroundColor:'white',  scaleX }:{scaleX}} />
             <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} exit={{ opacity: 0}} transition={{duration:3}}>
+                <Row>
+                    <Col className='d-flex justify-content-end'>
+                    {currentLightMode?(<motion.div whileHover={{scale: 1.1}} whileTap={{ scale: 0.9 }} className="btn btn-light roboto-light shadow m-0" onClick={handleDark}><Link style={currentDarkMode? {textDecoration:'none', color:'white'}:{textDecoration:'none', color:'black'}}><i className="bi bi-moon"></i></Link></motion.div>):
+                    (<motion.div whileHover={{scale: 1.1}} whileTap={{ scale: 0.9 }} type="button" className="btn btn-light roboto-light shadow m-0" onClick={handleLight}><Link style={currentDarkMode? {textDecoration:'none', color:'black'}:{textDecoration:'none', color:'black'}}><i className="bi bi-brightness-high"></i></Link></motion.div>)}
+                    </Col>
+                </Row>
                 <Row className='pb-5 mb-5'>
                     <Col md>
+                    
                     <h1 className='display-1'>Software</h1>
                     <TypeAnimation
                         className='display-1'
@@ -60,24 +79,24 @@ const Home = (props) => {
                         <p className='info-top-padding roboto-medium'>As an eager full-stack developer, I'm ready to dive into exciting projects, contribute my skills, and collaborate with passionate teams to create impactful and innovative solutions. </p>
                         {windowWidth < 640 ? (
                         <div className='d-flex'>
-                            <p className='roboto-thin pt-2 mobile-font text-start'>&#60; Focus on creating clean code and continuing to learn the newest technologies /&#62;</p>
-                            <p className='roboto-thin p-4 pt-2 mobile-font text-end'>&#60; Bringing creative approaches to research, analysis, and decision making /&#62; </p>
+                            <p className='roboto-light pt-2 mobile-font text-start'>&#60; Focus on creating clean code and continuing to learn the newest technologies /&#62;</p>
+                            <p className='roboto-light p-4 pt-2 mobile-font text-end'>&#60; Bringing creative approaches to research, analysis, and decision making /&#62; </p>
                             </div>
                         ):(
                         <div className='d-flex'>
-                            <p className='info-top-padding roboto-thin pt-2'>&#60; Focus on clean code and learning the newest technologies /&#62;</p>
-                            <p className='info-top-padding roboto-thin p-4 pt-2'>&#60; Bringing creative approaches to research, analysis, and decision making /&#62; </p>
+                            <p className='info-top-padding roboto-light pt-2'>&#60; Focus on clean code and learning the newest technologies /&#62;</p>
+                            <p className='info-top-padding roboto-light p-4 pt-2'>&#60; Bringing creative approaches to research, analysis, and decision making /&#62; </p>
                         </div>)}
                         <motion.button whileHover={{scale: 1.6}} whileTap={{ scale: 0.9 }} type="button" className="btn btn-light roboto-light shadow mb-5" onClick={() => navigate('/about')}>About Me</motion.button>
                     </Col>
                     <Col md>
-                        <i class="bi bi-code-slash"></i>
+                        <i className="bi bi-code-slash"></i>
                         <Image fluid roundedCircle
                             className= {windowWidth < 640 ? ("mobile-responsive rounded shadow-lg p-1 mb-1 bg-white") :"responsive rounded shadow-lg p-1 mb-1 bg-white"}
                             src="portoflio photo.jpeg"
                             alt="web developer"
                             />
-                        <i class="bi bi-code-slash"></i>
+                        <i className="bi bi-code-slash"></i>
                     </Col>
                 </Row>
             
@@ -86,50 +105,52 @@ const Home = (props) => {
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once:false }} transition={{duration:3}}>
                 <Row className='info-top-padding text-center pt-5 pb-5 mt-5 mb-5'>
                     <Col>
-                    <h1 className='display-5 roboto-thin'>Developer</h1>
-                    <TypeAnimation
-                        className='display-5 roboto-thin'
-                        sequence={[
-                            'Skillset', // Types 'One'
-                            2000, // Waits 1s
-                            '', // Deletes 'One' and types 'Two'
-                            2000, // Waits 2s
-                            'Skillset', // Types 'Three' without deleting 'Two'
-                            () => {
-                            console.log('Sequence completed');
-                            },
-                        ]}
-                        wrapper="span"
-                        cursor={true}
-                        repeat={Infinity}
-                        style={{ display: 'inline-block' }}
-                />
-                    
-                    <p className='info-top-padding roboto-thin pt-2'>&#60; Proven experience using web fundamentals as well as full stack python and MERN development. /&#62;</p>
-                    <motion.button whileHover={{scale:1.6}} whileTap={{ scale: 0.9 }} type="button" className= {windowWidth < 640 ? ("btn btn-light roboto-light shadow m-3 mb-5"):("btn btn-light roboto-light shadow m-3")}>My Resume</motion.button>
+                        <h1 className='display-5 roboto-light'>Developer</h1>
+                        <TypeAnimation
+                            className='display-5 roboto-light'
+                            sequence={[
+                                'Skillset', // Types 'One'
+                                2000, // Waits 1s
+                                '', // Deletes 'One' and types 'Two'
+                                2000, // Waits 2s
+                                'Skillset', // Types 'Three' without deleting 'Two'
+                                () => {
+                                console.log('Sequence completed');
+                                },
+                            ]}
+                            wrapper="span"
+                            cursor={true}
+                            repeat={Infinity}
+                            style={{ display: 'inline-block' }}
+                    />
+                        
+                        <p className='info-top-padding roboto-light pt-2'>&#60; Proven experience using web fundamentals as well as full stack python and MERN development. /&#62;</p>
+                        <motion.button whileHover={{scale:1.6}} whileTap={{ scale: 0.9 }} type="button" className= {windowWidth < 640 ? ("btn btn-light roboto-light shadow m-3 mb-5"):("btn btn-light roboto-light shadow m-3")}>
+                            <Link to={resume} target='_blank' rel='noreferrer' style={{textDecoration:'none', color:'black'}}>My Resume</Link>
+                        </motion.button>
                     </Col>
-                    <Col md className='d-flex align-items-center'>
+                    <Col md className='d-flex align-items-center justify-content-center'>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}>
                             <Image fluid
-                                className=""
+                                className="video-corners"
                                 src="web-fun.png"
                                 alt="web fun photo"
                                 />
                         </motion.div>
                     </Col>
-                    <Col md className='d-flex align-items-center'>
+                    <Col md className='d-flex align-items-center justify-content-center'>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}>
                             <Image fluid
-                                className=''
+                                className='video-corners'
                                 src="python-flask-mysql-sample.png"
                                 alt="python stack photo"
                                 />
                         </motion.div>
                     </Col>
-                    <Col md className='d-flex align-items-center'>
+                    <Col md className='d-flex align-items-center justify-content-center'>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}>
                             <Image fluid
-                                className=""
+                                className="video-corners"
                                 src="The MERN Stack.jpg"
                                 alt="mern stack photo"
                                 />
@@ -221,7 +242,7 @@ const Home = (props) => {
                     <Row className='mb-5 mt-5 pt-5'>
                         <Col lg>
                             <h1 className='text-center roboto-light'>Communication</h1>
-                            <p className={windowWidth < 640 ? ('info-top-padding roboto-thin pt-2 text-center mobile-font'):('info-top-padding roboto-thin pt-2 text-center')}>&#60; Communication is essential in software development to ensure alignment among team members, foster collaboration, and effectively address project requirements and challenges /&#62;</p>
+                            <p className={windowWidth < 640 ? ('info-top-padding roboto-light pt-2 text-center mobile-font'):('info-top-padding roboto-light pt-2 text-center')}>&#60; Communication is essential in software development to ensure alignment among team members, foster collaboration, and effectively address project requirements and challenges /&#62;</p>
                         </Col>
                         <Col lg className='d-flex align-items-center'>
                             <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}>
@@ -234,7 +255,7 @@ const Home = (props) => {
                         </Col>
                         <Col lg>
                             <h1 className='text-center roboto-light'>Problem Solving</h1>
-                            <p className={windowWidth < 640 ? ('info-top-padding roboto-thin pt-2 text-center mobile-font'):('info-top-padding roboto-thin pt-2 text-center')}>&#60; Problem-solving is crucial in software development as it enables developers to overcome challenges, innovate solutions, and create robust and efficient software products that meet user needs effectively. /&#62;</p>
+                            <p className={windowWidth < 640 ? ('info-top-padding roboto-light pt-2 text-center mobile-font'):('info-top-padding roboto-light pt-2 text-center')}>&#60; Problem-solving is crucial in software development as it enables developers to overcome challenges, innovate solutions, and create robust and efficient software products that meet user needs effectively. /&#62;</p>
                         </Col>
                     </Row>
                 </motion.div>   
@@ -243,7 +264,7 @@ const Home = (props) => {
                 <Row className='d-flex justify-content-center mb-5 mt-5 pt-5 pb-5'>
                     <Col className='d-flex justify-content-center' >
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}>
-                            <Link style={{textDecoration:'none', color:'black'}} to={'mailto:jaimequezadajr@gmail.com'}><h3 className='roboto-light'><i className="bi bi-envelope"></i></h3></Link>
+                            <Link style={currentDarkMode? {textDecoration:'none', color:'white'}:{textDecoration:'none', color:'black'}} to={'mailto:jaimequezadajr@gmail.com'}><h3 className='roboto-light'><i className="bi bi-envelope"></i></h3></Link>
                         </motion.div>
                     </Col>
                     <Col className='d-flex justify-content-center'>
@@ -253,21 +274,21 @@ const Home = (props) => {
                     </Col>
                     <Col className='d-flex justify-content-center'>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}>
-                            <Link style={{textDecoration:'none', color:'black'}} onClick={() => navigate('//github.com/JaimeQuezadaJr')}><h3 className='roboto-light'><i className="bi bi-github"></i></h3></Link>
+                            <Link style={currentDarkMode? {textDecoration:'none', color:'white'}:{textDecoration:'none', color:'black'}} onClick={() => navigate('//github.com/JaimeQuezadaJr')}><h3 className='roboto-light'><i className="bi bi-github"></i></h3></Link>
                         </motion.div>
                     </Col>
                     <Col className='d-flex justify-content-center'>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}>
-                            <h3 className='roboto-light'><i className="bi bi-file-earmark-text-fill"></i></h3>
+                            <Link to={resume} target='_blank' rel='noreferrer' style={currentDarkMode? {textDecoration:'none', color:'white'}:{textDecoration:'none', color:'black'}}><h3 className='roboto-light'><i className="bi bi-file-earmark-text-fill"></i></h3></Link>
                         </motion.div>
                     </Col>
                     </Row>
                 </motion.div>
             </Container>
-            <footer className='bg-light p-2 footer'>
+            <footer className={currentDarkMode? ('bg-dark p-2 footer'):('bg-light p-2 footer')}>
                 <div className='d-flex justify-content-around'>
                 {/* <p className='m-0 roboto-light'>Designed & Developed by Jaime Quezada Jr</p> */}
-                    <p className='m-0 roboto-light' style={{fontSize:'0.8rem'}}>Copyright &#169; Jaime Quezada Jr 2024</p>
+                    <p className='m-0 roboto-light' style={currentDarkMode? {fontSize:'0.8rem', color:'white'}:{fontSize:'0.8rem', color:'black'}}>Copyright &#169; Jaime Quezada Jr 2024</p>
                 </div>
             </footer>
         </div>
