@@ -3,7 +3,7 @@
     filter: contrast(2);
   }
   .top-padding {
-    margin-top: 160px;
+    margin-top: 120px;
   }
   .mobile-top-padding {
     margin-top: 80px;
@@ -181,4 +181,8 @@
     height: 10px;
     background:black;
     transform-origin: 0%;
+  }
+
+  .qualities-corners {
+    border-radius: 60px;
   }

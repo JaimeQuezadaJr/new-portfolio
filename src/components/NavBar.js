@@ -65,7 +65,7 @@ const NavBar = (props) => {
                     </Container>
                 </Navbar>
             ):(
-            <Navbar className={currentDarkMode?('fixed-top bg-dark'):('fixed-top bg-light')} style={{height:'160px'}}>
+            <Navbar className={currentDarkMode?('fixed-top bg-dark'):('fixed-top bg-light')} style={{height:'120px'}}>
                 <Container className='p-5'>
                     <Navbar.Brand as={Link} to="/" style={currentDarkMode? {fontSize:'x-large', color:'white'}:{fontSize:'x-large'}} className='roboto-medium'>Jaime Quezada</Navbar.Brand>
                         <Nav className=" justify-contend-end">

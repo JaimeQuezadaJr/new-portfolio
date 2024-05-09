@@ -177,7 +177,7 @@ const Home = (props) => {
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-light project-info mb-5'>&#60; Integrated the USDA FoodData Central API to incorporate nutrition data /&#62;</p></motion.div>
                         <div className='d-flex justify-content-start'>
                             <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}>
-                                <Link className='roboto-light display-5' style={{textDecoration:'none', color:'black'}} onClick={() => navigate('//github.com/JaimeQuezadaJr/nutrilog')}><i className="bi bi-github"></i></Link>
+                                <Link className='roboto-light display-5' style={currentDarkMode? {textDecoration:'none', color:'white'}:{textDecoration:'none', color:'black'}} onClick={() => navigate('//github.com/JaimeQuezadaJr/nutrilog')}><i className="bi bi-github"></i></Link>
                             </motion.div>
                         </div>
                         {/* <motion.button whileHover={{scale: 1.1}} whileTap={{ scale: 0.9 }} type="button" className="btn btn-light roboto-light shadow mb-5 mt-5">Learn More</motion.button> */}
@@ -197,7 +197,7 @@ const Home = (props) => {
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-light project-info mb-5'>&#60; Implemented Bootstrap for responsive design and styled with HTML5 and CSS for engaging UI components and page layouts /&#62;</p></motion.div>
                         <div className='d-flex justify-content-start'>
                             <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.0 }}>
-                                <Link className='roboto-light display-5' style={{textDecoration:'none', color:'black'}} onClick={() => navigate('//github.com/JaimeQuezadaJr/TravelMem')}><i className="bi bi-github"></i></Link>
+                                <Link className='roboto-light display-5' style={currentDarkMode? {textDecoration:'none', color:'white'}:{textDecoration:'none', color:'black'}}  onClick={() => navigate('//github.com/JaimeQuezadaJr/TravelMem')}><i className="bi bi-github"></i></Link>
                             </motion.div>
                         </div>
                         
@@ -239,7 +239,7 @@ const Home = (props) => {
                             <h3 className='text-start roboto-medium'>Core Qualities</h3>
                         </Col>
                     </Row> */}
-                    <Row className='mb-5 mt-5 pt-5'>
+                    <Row className='mb-5 mt-5 pt-5 d-flex align-items-center'>
                         <Col lg>
                             <h1 className='text-center roboto-light'>Communication</h1>
                             <p className={windowWidth < 640 ? ('info-top-padding roboto-light pt-2 text-center mobile-font'):('info-top-padding roboto-light pt-2 text-center')}>&#60; Communication is essential in software development to ensure alignment among team members, foster collaboration, and effectively address project requirements and challenges /&#62;</p>
@@ -247,7 +247,7 @@ const Home = (props) => {
                         <Col lg className='d-flex align-items-center'>
                             <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}>
                                 <Image fluid
-                                    className="p-5"
+                                    className="p-5 qualities-corners"
                                     src="Web-Developer-Header.png"
                                     alt="web developer photo"
                                     />
