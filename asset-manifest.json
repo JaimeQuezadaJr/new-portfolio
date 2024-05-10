@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/new-portfolio/static/css/main.b8b36e0b.css",
+    "main.js": "/new-portfolio/static/js/main.ef81707a.js",
+    "static/js/453.d22c673f.chunk.js": "/new-portfolio/static/js/453.d22c673f.chunk.js",
+    "static/media/Jaime Quezada.pdf": "/new-portfolio/static/media/Jaime Quezada.72e4080f0a60e836429a.pdf",
+    "index.html": "/new-portfolio/index.html",
+    "main.b8b36e0b.css.map": "/new-portfolio/static/css/main.b8b36e0b.css.map",
+    "main.ef81707a.js.map": "/new-portfolio/static/js/main.ef81707a.js.map",
+    "453.d22c673f.chunk.js.map": "/new-portfolio/static/js/453.d22c673f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b8b36e0b.css",
+    "static/js/main.ef81707a.js"
+  ]
+}
