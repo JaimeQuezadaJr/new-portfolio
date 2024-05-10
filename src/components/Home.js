@@ -89,7 +89,7 @@ const Home = (props) => {
                     </Col>
                     <Col md>
                         <i className="bi bi-code-slash"></i>
-                        <Image fluid roundedCircle
+                        <Image roundedCircle
                             className= {windowWidth < 640 ? ("mobile-responsive rounded shadow-lg p-1 mb-1 bg-white") :("responsive rounded shadow-lg p-1 mb-1 bg-white")}
                             src="portoflio photo.jpeg"
                             alt="web developer"

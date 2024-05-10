@@ -47,7 +47,7 @@ const About = (props) => {
     return (
         <div className={windowWidth < 640 ? ('mobile-top-padding'):('top-padding')} style={currentDarkMode? {backgroundColor:'black', color:'white'}:null}>
             <Container className='p-5'>
-                <motion.div className="progress-bar" style={currentDarkMode? {backgroundColor:'white',  scaleX }:{scaleX}} />  
+                <motion.div className="progress-bar" style={currentDarkMode? {backgroundColor:'white',  scaleX }:{backgroundColor:'black',scaleX}} />  
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity:1 }} exit={{ opacity: 0}} transition={{duration:3}}>
                 <Row className='d-flex justify-content-end'>
                     <Col className='d-flex justify-content-end'>
