@@ -53,11 +53,11 @@ const NavBar = (props) => {
                                     </Offcanvas.Header>
                                     <Offcanvas.Body>
                                 <Nav className="justify-contend-end roboto-light">
-                                    <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><Nav.Link style={{fontSize:'medium'}} as={Link} to="/" show={show2} onClick={handleClose2}><i className="bi bi-house"></i> </Nav.Link></motion.div>
-                                    <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><Nav.Link style={{fontSize:'medium'}} as={Link} to="/about" show={show2} onClick={handleClose2}><i className="bi bi-file-person"></i> About Me</Nav.Link></motion.div>
+                                    <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><Nav.Link style={{fontSize:'large'}} as={Link} to="/" show={show2} onClick={handleClose2}><i className="bi bi-house"></i> Home</Nav.Link></motion.div>
+                                    <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><Nav.Link style={{fontSize:'large'}} as={Link} to="/about" show={show2} onClick={handleClose2}><i className="bi bi-file-person"></i> About Me</Nav.Link></motion.div>
                                     <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><Nav.Link className='pb-5 mb-5' style={{fontSize:'large'}} as={Link} to={resume} target='_blank' rel='noreferrer' show={show2} onClick={handleClose2}><i className="bi bi-file-earmark-text-fill"></i> My Resume</Nav.Link></motion.div>
-                                    <Nav.Link className='pt-5 mt-5 pb-0 roboto-thin' style={{fontSize:'medium'}} as={Link} to="/contact" show={show2} onClick={handleClose2}>Contact Me</Nav.Link>
-                                    <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><Nav.Link style={{fontSize:'medium'}} as={Link} to={'mailto:jaimequezadajr@gmail.com'} show={show2} onClick={handleClose2}>jaimequezadajr@gmail.com</Nav.Link></motion.div>
+                                    <Nav.Link className='pt-5 mt-5 pb-0 roboto-thin' style={{fontSize:'large'}} as={Link} to="/contact" show={show2} onClick={handleClose2}>Contact Me</Nav.Link>
+                                    <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><Nav.Link style={{fontSize:'large'}} as={Link} to={'mailto:jaimequezadajr@gmail.com'} show={show2} onClick={handleClose2}>jaimequezadajr@gmail.com</Nav.Link></motion.div>
                                     </Nav>
                                 </Offcanvas.Body>
                                 </Offcanvas>

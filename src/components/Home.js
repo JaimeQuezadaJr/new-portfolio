@@ -67,9 +67,7 @@ const Home = (props) => {
                             '', // Deletes 'One' and types 'Two'
                             2000, // Waits 2s
                             'Developer', // Types 'Three' without deleting 'Two'
-                            () => {
-                            console.log('Sequence completed');
-                            },
+                            
                         ]}
                         wrapper="span"
                         cursor={true}
@@ -87,7 +85,7 @@ const Home = (props) => {
                             <p className='info-top-padding roboto-light pt-2'>&#60; Focus on clean code and learning the newest technologies /&#62;</p>
                             <p className='info-top-padding roboto-light p-4 pt-2'>&#60; Bringing creative approaches to research, analysis, and decision making /&#62; </p>
                         </div>)}
-                        <motion.button whileHover={{scale: 1.6}} whileTap={{ scale: 0.9 }} type="button" className="btn btn-light roboto-light shadow mb-5" onClick={() => navigate('/about')}>About Me</motion.button>
+                        <motion.button whileHover={{scale: 1.1}} whileTap={{ scale: 0.9 }} type="button" className="btn btn-light roboto-light shadow mb-5" onClick={() => navigate('/about')}>About Me</motion.button>
                     </Col>
                     <Col md>
                         <i className="bi bi-code-slash"></i>
@@ -114,9 +112,7 @@ const Home = (props) => {
                                 '', // Deletes 'One' and types 'Two'
                                 2000, // Waits 2s
                                 'Skillset', // Types 'Three' without deleting 'Two'
-                                () => {
-                                console.log('Sequence completed');
-                                },
+                                
                             ]}
                             wrapper="span"
                             cursor={true}
@@ -125,7 +121,7 @@ const Home = (props) => {
                     />
                         
                         <p className='info-top-padding roboto-light pt-2'>&#60; Proven experience using web fundamentals as well as full stack python and MERN development. /&#62;</p>
-                        <motion.button whileHover={{scale:1.6}} whileTap={{ scale: 0.9 }} type="button" className= {windowWidth < 640 ? ("btn btn-light roboto-light shadow m-3 mb-5"):("btn btn-light roboto-light shadow m-3")}>
+                        <motion.button whileHover={{scale:1.1}} whileTap={{ scale: 0.9 }} type="button" className= {windowWidth < 640 ? ("btn btn-light roboto-light shadow m-3 mb-5"):("btn btn-light roboto-light shadow m-3")}>
                             <Link to={resume} target='_blank' rel='noreferrer' style={{textDecoration:'none', color:'black'}}>My Resume</Link>
                         </motion.button>
                     </Col>
