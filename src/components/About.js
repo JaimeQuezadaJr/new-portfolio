@@ -83,7 +83,7 @@ const About = (props) => {
                             </Col>
                             <Col md>
                                 <p className={windowWidth < 640 ? ('text-start roboto-medium'):('text-start roboto-medium')}>Jinetics Inc.</p>
-                                <p className={windowWidth < 640 ? ('text-start roboto-medium mobile-font'):('text-start roboto-thin mobile-font')}>Controls Software Engineer; Contract</p>
+                                <p className={windowWidth < 640 ? ('text-start roboto-medium mobile-font'):('text-start roboto-medium mobile-font')}>Controls Software Engineer; Contract</p>
                                 <p className={windowWidth < 640 ? ('text-start roboto-light mobile-font'):('text-start roboto-light')}>Collaborated in refactoring complex legacy codebase using OOP in Python resulting in improved code readability and overall software quality.</p>
                                 <p className={windowWidth < 640 ? ('text-start roboto-light mobile-font'):('text-start roboto-light')}>Utilized protocols, inheritance, and encapsulation to enhance code maintainability, reduce redundancy and foster modular organized code structures.</p>
                                 <p className={windowWidth < 640 ? ('text-start roboto-light mobile-font'):('text-start roboto-light')}>Created unit tests using pytest to execute tests that cover various scenarios, from edge cases to typical user inputs, validating each component's behavior in isolation. </p>
