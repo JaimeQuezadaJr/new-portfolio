@@ -205,7 +205,7 @@ const Home = (props) => {
                     </Col>
                     <Col className={windowWidth < 940 ? ('mt-5'):(null)} lg={8}>
                         <video className='img-fluid video-corners' autoPlay muted loop>
-                            <source src="TravelMem New Copy.mp4" type="video/mp4"/>
+                            <source src="TravelMem New copy.mp4" type="video/mp4"/>
                         </video>
                     </Col>
                 </Row>
