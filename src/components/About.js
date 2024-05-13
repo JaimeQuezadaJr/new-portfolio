@@ -58,7 +58,7 @@ const About = (props) => {
                     <Row className='pb-5 mb-5'>
                         <Col lg>
                         <h1 className={windowWidth < 640 ? ('display-3 roboto-regular'):('display-1 roboto-regular')}>Who I Am</h1>
-                            <p className={windowWidth < 640 ? ('info-top-padding roboto-regular mobile-font'):('info-top-padding roboto-regular')}>Hello, my name is <span className='roboto-bold'>Jaime Quezada</span> a software developer passionate about leveraging technology to create innovative solutions that make a positive impact. With a background in designing and optimizing mechanical systems, I bring a unique perspective to the world of software engineering. Having spent several years in the field of mechanical engineering, I've developed a strong foundation in critical thinking, attention to detail, and analytical reasoning—skills that seamlessly translate into the realm of software development. Motivated by a desire to expand my horizons and explore new avenues of innovation, I've embarked on a journey to transition into software engineering.
+                            <p className={windowWidth < 640 ? ('info-top-padding roboto-regular mobile-font'):('info-top-padding roboto-regular')}>Hello, my name is <span className='roboto-bold'>Jaime Quezada</span> a software developer passionate about leveraging technology to create innovative solutions that make a positive impact. With a background in designing and optimizing mechanical systems, I bring a unique perspective to the world of coding. Having spent several years in the field of mechanical engineering, I've developed a strong foundation in critical thinking, attention to detail, and analytical reasoning—skills that seamlessly translate into the realm of software development. Motivated by a desire to expand my horizons and explore new avenues of innovation, I've embarked on a journey to transition into software development.
                             <p></p> 
                             Through self-study, coding bootcamp, and hands-on projects, I've acquired proficiency in programming languages like Python and Javascript, as well as familiarity with software development tools and methodologies. I recently worked in a fuel cell startup developing Python code to interface with electrical testing equipment and hardware controllers that allowed me to be in an environment where every day was a dynamic journey filled with innovation, collaboration, and problem-solving. 
                             <p></p>
@@ -87,6 +87,7 @@ const About = (props) => {
                                 <p className={windowWidth < 640 ? ('text-start roboto-light mobile-font'):('text-start roboto-light')}>Collaborated in refactoring complex legacy codebase using OOP in Python resulting in improved code readability and overall software quality.</p>
                                 <p className={windowWidth < 640 ? ('text-start roboto-light mobile-font'):('text-start roboto-light')}>Utilized protocols, inheritance, and encapsulation to enhance code maintainability, reduce redundancy and foster modular organized code structures.</p>
                                 <p className={windowWidth < 640 ? ('text-start roboto-light mobile-font'):('text-start roboto-light')}>Created unit tests using pytest to execute tests that cover various scenarios, from edge cases to typical user inputs, validating each component's behavior in isolation. </p>
+                                <p className={windowWidth < 640 ? ('text-start roboto-light mobile-font'):('text-start roboto-light')}>Used GitHub to manage version control, track issues, facilitate code review and automate workflows. </p>
                             </Col> 
                         </Row>
 
@@ -120,7 +121,7 @@ const About = (props) => {
             <footer className={currentDarkMode? ('bg-dark p-2 footer'):('bg-light p-2 footer')}>
                 <div className='d-flex justify-content-around'>
                 {/* <p className='m-0 roboto-light'>Designed & Developed by Jaime Quezada Jr</p> */}
-                    <p className='m-0 roboto-light' style={currentDarkMode? {fontSize:'0.8rem', color:'white'}:{fontSize:'0.8rem', color:'black'}}>Copyright &#169; Jaime Quezada Jr 2024</p>
+                    <p className='m-0 roboto-light' style={currentDarkMode? {fontSize:'0.8rem', color:'white'}:{fontSize:'0.8rem', color:'black'}}>Copyright &#169; Jaime Quezada 2024</p>
                 </div>
             </footer>
         </div>

@@ -50,6 +50,9 @@
   .mobile-font {
     font-size: 0.8rem;
   }
+  .small-font {
+    font-size: 0.9rem;
+  }
 
   .mobile-responsive {
     width: 75%;

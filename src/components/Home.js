@@ -74,16 +74,16 @@ const Home = (props) => {
                         repeat={Infinity}
                         style={{ display: 'inline-block' }}
                 />
-                        <p className='info-top-padding roboto-medium'>As an eager full-stack developer, I'm ready to dive into exciting projects, contribute my skills, and collaborate with passionate teams to create impactful and innovative solutions. </p>
+                        <p className='info-top-padding roboto-medium'>As an eager Full Stack Developer, I'm ready to dive into exciting projects, contribute my skills, and collaborate with passionate teams to create impactful and innovative solutions. </p>
                         {windowWidth < 640 ? (
                         <div className='d-flex'>
-                            <p className='roboto-light pt-2 mobile-font text-start'>&#60; Focus on creating clean code and continuing to learn the newest technologies /&#62;</p>
-                            <p className='roboto-light p-4 pt-2 mobile-font text-end'>&#60; Bringing creative approaches to research, analysis, and decision making /&#62; </p>
+                            <p className='roboto-light pt-2 mobile-font text-start'>&#60; Highly skilled at effective communication to collaborate with cross-functional teams /&#62;</p>
+                            <p className='roboto-light p-4 pt-2 mobile-font text-end'>&#60; Adaptability to learn and work with various programming languages and frameworks   /&#62; </p>
                             </div>
                         ):(
                         <div className='d-flex'>
-                            <p className='info-top-padding roboto-light pt-2'>&#60; Focus on clean code and learning the newest technologies /&#62;</p>
-                            <p className='info-top-padding roboto-light p-4 pt-2'>&#60; Bringing creative approaches to research, analysis, and decision making /&#62; </p>
+                            <p className='info-top-padding roboto-light pt-2 small-font'>&#60; Highly skilled at effective communication to collaborate with cross-functional teams /&#62;</p>
+                            <p className='info-top-padding roboto-light p-4 pt-2 small-font'>&#60; Adaptability to learn and work with various programming languages and frameworks /&#62; </p>
                         </div>)}
                         <motion.button whileHover={{scale: 1.1}} whileTap={{ scale: 0.9 }} type="button" className="btn btn-light roboto-light shadow mb-5" onClick={() => navigate('/about')}>About Me</motion.button>
                     </Col>
@@ -120,7 +120,7 @@ const Home = (props) => {
                             style={{ display: 'inline-block' }}
                     />
                         
-                        <p className='info-top-padding roboto-light pt-2'>&#60; Proven experience using web fundamentals as well as full stack python and MERN development. /&#62;</p>
+                        <p className='info-top-padding roboto-light pt-2 small-font'>&#60; Proven experience using web fundamentals as well as full stack python and MERN development /&#62;</p>
                         <motion.button whileHover={{scale:1.1}} whileTap={{ scale: 0.9 }} type="button" className= {windowWidth < 640 ? ("btn btn-light roboto-light shadow m-3 mb-5"):("btn btn-light roboto-light shadow m-3")}>
                             <Link to={resume} target='_blank' rel='noreferrer' style={{textDecoration:'none', color:'black'}}>My Resume</Link>
                         </motion.button>
@@ -235,7 +235,7 @@ const Home = (props) => {
                             <h3 className='text-start roboto-medium'>Core Qualities</h3>
                         </Col>
                     </Row> */}
-                    <Row className='mb-5 mt-5 pt-5 d-flex align-items-center'>
+                    <Row className='mb-5 mt-5 pt-5 pb-5 d-flex align-items-center'>
                         <Col lg>
                             <h1 className='text-center roboto-light'>Communication</h1>
                             <p className={windowWidth < 640 ? ('info-top-padding roboto-light pt-2 text-center mobile-font'):('info-top-padding roboto-light pt-2 text-center')}>&#60; Communication is essential in software development to ensure alignment among team members, foster collaboration, and effectively address project requirements and challenges /&#62;</p>
@@ -251,7 +251,7 @@ const Home = (props) => {
                         </Col>
                         <Col lg>
                             <h1 className='text-center roboto-light'>Problem Solving</h1>
-                            <p className={windowWidth < 640 ? ('info-top-padding roboto-light pt-2 text-center mobile-font'):('info-top-padding roboto-light pt-2 text-center')}>&#60; Problem-solving is crucial in software development as it enables developers to overcome challenges, innovate solutions, and create robust and efficient software products that meet user needs effectively. /&#62;</p>
+                            <p className={windowWidth < 640 ? ('info-top-padding roboto-light pt-2 text-center mobile-font'):('info-top-padding roboto-light pt-2 text-center')}>&#60; Problem-solving is crucial in software development as it enables developers to overcome challenges, innovate solutions, and create robust and efficient software products that meet user needs effectively /&#62;</p>
                         </Col>
                     </Row>
                 </motion.div>   
@@ -284,7 +284,7 @@ const Home = (props) => {
             <footer className={currentDarkMode? ('bg-dark p-2 footer'):('bg-light p-2 footer')}>
                 <div className='d-flex justify-content-around'>
                 {/* <p className='m-0 roboto-light'>Designed & Developed by Jaime Quezada Jr</p> */}
-                    <p className='m-0 roboto-light' style={currentDarkMode? {fontSize:'0.8rem', color:'white'}:{fontSize:'0.8rem', color:'black'}}>Copyright &#169; Jaime Quezada Jr 2024</p>
+                    <p className='m-0 roboto-light' style={currentDarkMode? {fontSize:'0.8rem', color:'white'}:{fontSize:'0.8rem', color:'black'}}>Copyright &#169; Jaime Quezada 2024</p>
                 </div>
             </footer>
         </div>
