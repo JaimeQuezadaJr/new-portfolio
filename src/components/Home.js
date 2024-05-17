@@ -164,7 +164,8 @@ const Home = (props) => {
                         </video>
                     </Col>
                     <Col lg={4}>
-                        <h1 className= {windowWidth < 940 ? ('roboto-regular mb-2 mt-4'):('roboto-regular mb-2')}>nutrilog</h1>
+                        <h1 className= {windowWidth < 940 ? ('roboto-regular mb-2 mt-4'):('roboto-regular mb-0')}>nutrilog</h1>
+                        <p className='roboto-regular mobile-font m-1 mb-4'> Nutrition Tracking App</p>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-regular'>&#60; MongoDB / Express.js / Node.js / React.js /&#62;</p></motion.div>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-light project-info'>&#60; Architected an intuitive single page app with React and implemented responsive design with React-Bootstrap for a consistent user experience across screen sizes /&#62;</p></motion.div>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-light project-info'>&#60; Developed back-end with Express and MongoDB for their flexible structure and ease of data access /&#62;</p></motion.div>
@@ -184,6 +185,7 @@ const Home = (props) => {
                 <Row className={windowWidth < 940 ? ('pb-5 mb-5'):('pt-5 mt-5 pb-5 mb-5')}>
                     <Col lg={4}>
                         <h1 className='roboto-regular mb-2'>TravelMem</h1>
+                        <p className='roboto-regular mobile-font m-1 mb-4'>Travel Memories Social App</p>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-regular'>&#60; Python / Flask / MySQL /&#62;</p></motion.div>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-light project-info'>&#60; Employed Flask framework for fast implementation of additional features via Jinja2 template such as user dashboard, varied logic for authorization, and flash messages /&#62;</p></motion.div>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}><p className='roboto-light project-info'>&#60; Encrypted user password through the use of Bcrypt and hashing for user security /&#62;</p></motion.div>
