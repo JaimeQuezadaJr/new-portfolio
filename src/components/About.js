@@ -112,7 +112,7 @@ const About = (props) => {
                         </Col>
                         <Col className='d-flex justify-content-center'>
                             <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}>
-                            <Link to={resume} target='_blank' rel='noreferrer' style={currentDarkMode? {textDecoration:'none', color:'white'}:{textDecoration:'none', color:'black'}}><h3 className='roboto-light'><i className="bi bi-file-earmark-text-fill"></i></h3></Link>
+                            <Link to='https://jaimequezadajr.github.io/new-portfolio/static/media/Jaime%20Quezada.449d0770b2b909c428c0.pdf' target='_blank' rel='noreferrer' style={currentDarkMode? {textDecoration:'none', color:'white'}:{textDecoration:'none', color:'black'}}><h3 className='roboto-light'><i className="bi bi-file-earmark-text-fill"></i></h3></Link>
                             </motion.div>
                         </Col>
                     </Row>
