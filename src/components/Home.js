@@ -267,12 +267,12 @@ const Home = (props) => {
                     </Col>
                     <Col className='d-flex justify-content-center'>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}>
-                            <Link style={{textDecoration:'none'}} onClick={() => navigate('//www.linkedin.com/in/jaimequezadajr/')}><h3 className='roboto-light'><i className="bi bi-linkedin"></i></h3></Link>
+                            <Link style={{textDecoration:'none'}} to='//www.linkedin.com/in/jaimequezadajr/' target="_blank" rel="noopener noreferrer"><h3 className='roboto-light'><i className="bi bi-linkedin"></i></h3></Link>
                         </motion.div>
                     </Col>
                     <Col className='d-flex justify-content-center'>
                         <motion.div whileHover={{scale:0.9}} whileTap={{ scale: 1.1 }}>
-                            <Link style={currentDarkMode? {textDecoration:'none', color:'white'}:{textDecoration:'none', color:'black'}} onClick={() => navigate('//github.com/JaimeQuezadaJr')}><h3 className='roboto-light'><i className="bi bi-github"></i></h3></Link>
+                            <Link style={currentDarkMode? {textDecoration:'none', color:'white'}:{textDecoration:'none', color:'black'}} to='//github.com/JaimeQuezadaJr' target="_blank" rel="noopener noreferrer"><h3 className='roboto-light'><i className="bi bi-github"></i></h3></Link>
                         </motion.div>
                     </Col>
                     <Col className='d-flex justify-content-center'>
